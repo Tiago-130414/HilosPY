@@ -1,6 +1,6 @@
 import threading
   
-def print_num(num):
+def print_num():
     """
     funcion que imprime numeros del 1 al 10
     """
@@ -16,6 +16,6 @@ def print_square(num):
 if __name__ == "__main__":
     #creando los hilos y arrancando hilos
     t1 = threading.Thread(target=print_square, args=(10,)).start()
-    t2 = threading.Thread(target=print_num, args=(10,)).start()
-    
+    t2 = threading.Thread(target=print_num).start()
+
     print("Hilos ejecutados correctamente!")
